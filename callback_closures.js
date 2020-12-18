@@ -36,9 +36,9 @@ function innerBubbleSortLoop(arr, i, madeAnySwaps, outerBubbleSortLoop) {
                 arr[i] = arr[i+1];
                 arr[i+1] = firstnum;
                 madeAnySwaps = true
-            }
-
+            } 
         }
+        i++;
     }
         
     // 2. Else, use `askIfGreaterThan` to compare `arr[i]` and `arr[i +
