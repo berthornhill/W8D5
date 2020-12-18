@@ -1,4 +1,5 @@
 class Clock {
+  
     constructor() {
       // 1. Create a Date object.
       // 2. Store the hours, minutes, and seconds.
@@ -7,19 +8,22 @@ class Clock {
 
       let date = new Date();
       this.hours = date.getHours();
-      this.minutes = date.getMinutes();
+      this.minutes = date.getMinutes(); 
       this.seconds = date.getSeconds();
-             
-    //   printTime();
+      setInterval(this._tick.bind(this), 1000);
+      // let timePrinting = this.printTime
+      // console.log(this.printTime);
+      // console.log("constructor", this)
+      // this._tick();
 
-
+  
     }
   
     printTime() {
       // Format the time in HH:MM:SS
       // Use console.log to print it.
+      // this.setInterval(_tick, 1000);
       console.log(`${this.hours}:${this.minutes}:${this.seconds}`);
-
 
     }
   
@@ -38,11 +42,15 @@ class Clock {
         this.minutes = 0;
         this.hours += 1;
       }
-      
+      // timePrinting()
       this.printTime();
+      // console.log(this.printTime);
+      // console.log("tick", this)
     }
   }
   
   const clock = new Clock();
-  console.log(Clock.prototype._tick())
-//   console.log(clock)
+  // console.log(Clock.prototype._tick)
+  // console.log(clock)
+  // console.log(clock._tick)
+
